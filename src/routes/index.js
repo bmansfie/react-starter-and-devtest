@@ -22,6 +22,7 @@ export default {
     require('./register').default,
 
     // place new routes before...
+    require('./article').default,
     require('./content').default,
     require('./notFound').default,
   ],

@@ -9,12 +9,12 @@
 
 @import '../variables.css';
 
-:root {
-  --brand-color: #61dafb;
-}
+/*:root {
+  //--brand-color: #61dafb;
+}*/
 
 .root {
-  background: #373277;
+  background: var(--brand-color);
   color: #fff;
 }
 
