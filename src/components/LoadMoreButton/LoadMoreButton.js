@@ -16,9 +16,9 @@ function LoadMoreButton({ label, parent }) {
   myParent = parent;
 
   return (
-    <div className={s.button} onClick={onClick}>
+    <button className={s.button} onClick={onClick}>
       {label}
-    </div>
+    </button>
   );
 }
 
