@@ -40,7 +40,7 @@ class VideoTile extends Component {
     if (!this.state.play) {
       videoIframe =
         <div className={s.video}>
-          <div className={s.playButton} />
+          <div className={s.playButton} onClick={this.clicked.bind(this)} />
           <img
             width="213"
             height="120"
