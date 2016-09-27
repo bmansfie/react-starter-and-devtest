@@ -1,11 +1,9 @@
 ## React Starter Kit — base for devtest demo
 
-*requires node >5*
 
-'''
-npm install
-npm start
-'''
+  1. requires node >5
+  2. `npm install`
+  3. `npm start`
 
 See the timelog.txt for time spent on the various pages and setting up the starter kit.
 
