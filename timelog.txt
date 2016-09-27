@@ -1,0 +1,11 @@
+Just noticed the intent to log time via GIT checkins.  Sorry I didn't catch that earlier.
+
+Getting the initial framework up and running took a crazy amount of time, and then
+working through the learning curve to understand the naunces of the router, the css isolation, and
+other bits of the react starter kit took me a bit of time.  I'm estimating about 6-7 hours to get it
+all running smoothly.  I way underestimated the effort involved on this step :)
+
+Subsequently the Article page took me about 3.5 hours to make all the components and tweak it to run
+correctly.
+
+The masonry page has logged 1 hours to date.
