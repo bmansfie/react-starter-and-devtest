@@ -24,6 +24,7 @@ export default {
     // place new routes before...
     require('./article').default,
     require('./masonry').default,
+    require('./tile').default,
     require('./content').default,
     require('./notFound').default,
   ],

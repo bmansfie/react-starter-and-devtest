@@ -88,7 +88,6 @@ class Masonry extends Component {
       var button =
         <div className={s.filler} id={s.filler}>
           <LoadMoreButton label="Load More" parent={this}
-                          onClick={this.clickMore}
           />
         </div>;
     } else {

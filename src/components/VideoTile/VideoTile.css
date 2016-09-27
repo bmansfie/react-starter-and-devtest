@@ -1,0 +1,276 @@
+/**
+ * @author Brandon Mansfield
+ */
+
+@import '../../../node_modules/normalize.css/normalize.css';
+
+/*! React Starter Kit | MIT License | https://www.reactstarterkit.com/ */
+
+@import '../variables.css';
+
+/*
+ * Base styles
+ * ========================================================================== */
+
+.container {
+  height: auto;
+  margin: 24px auto;
+  background-color: #fff;
+  width: 800px;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  margin: 0 18px 18px 18px;
+}
+
+.videoInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px 0 24px;
+}
+
+.playButton {
+  position: relative;
+  background: url("/playbuttonSmall.png");
+  height: 33px;
+  width: 45px;
+  top: 75px;
+  left: 85px;
+  margin: 0;
+}
+
+.image {
+  margin: 10px 10px 10px 10px;
+  height: 190px;
+  width: 360px;
+}
+
+.noImage {
+  margin: 10px 10px 10px 10px;
+}
+
+.wide {
+  width: 640px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 25px;
+  flex-grow: 1;
+  margin: 0 7px 18px 7px;
+}
+
+.caption {
+  margin: 0 7px 0 7px;
+}
+.name {
+  margin: 36px 7px 7px 7px;
+  color: var(--brand-color);
+}
+
+html {
+  color: #222;
+  font-weight: 100;
+  font-size: 1em; /* ~16px; */
+  font-family: var(--font-family-base);
+  line-height: 1.375; /* ~22px */
+}
+
+a {
+  color: #0074c2;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+.imageTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+.imageCaption {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.caption {
+  display: flex;
+  flex-direction: row;
+}
+.titleAndCaption {
+  flex-grow: 1;
+  margin: 8px 0 0 0;
+}
+
+.thumbnails {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* float: right; */
+}
+
+.thumb {
+  height: 75px;
+  width: 75px;
+  margin: 10px 0 10px 10px;
+}
+
+.bigImage {
+  height: 533px;
+  width: 800px;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/*
+ * Browser upgrade prompt
+ * ========================================================================== */
+
+:global(.browserupgrade) {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+ * Print styles
+ * Inlined to avoid the additional HTTP request:
+ * http://www.phpied.com/delay-loading-your-print-css/
+ * ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
