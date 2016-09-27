@@ -108,8 +108,6 @@ class Masonry extends Component {
         meta={masonryData.tiles[i].meta}
       />);
     }
-    console.log('render: ' + this.state.render);
-    console.log('end: ' + end);
     return (
       <div className={s.container}>
         <Header />
@@ -123,7 +121,9 @@ class Masonry extends Component {
             </div>
           </div>
         </div>
-        {button}
+        <center>
+          {button}
+        </center>
         <Footer />
       </div>
     );

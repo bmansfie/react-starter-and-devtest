@@ -25,6 +25,7 @@ export default {
     require('./article').default,
     require('./masonry').default,
     require('./tile').default,
+    require('./tilegroups').default,
     require('./content').default,
     require('./notFound').default,
   ],

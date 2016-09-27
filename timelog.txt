@@ -1,11 +1,28 @@
 Just noticed the intent to log time via GIT checkins.  Sorry I didn't catch that earlier.
 
-Getting the initial framework up and running took a crazy amount of time, and then
+I did put some thought into the frame work I picked.  I wanted something up to date with the state
+of things, something that could be used for the next 2 years without feeling deprecated.  I wanted
+an environment that took care of the bulk of the heavy lifting in setting up a system for me.
+So I started with https://github.com/kriasoft/react-starter-kit .  I forked it and started from there.
+
+Understand that my base react knowledge was limited, I've half way through a couple of tutorials but
+that's it.  Also, there were a lot of packages in this kit that I've never used before.  Which is
+largely reflected in the startup time.
+
+Time consumption:
+
+7 hours: Getting the initial framework up and running took a crazy amount of time, and then
 working through the learning curve to understand the naunces of the router, the css isolation, and
-other bits of the react starter kit took me a bit of time.  I'm estimating about 6-7 hours to get it
-all running smoothly.  I way underestimated the effort involved on this step :)
+other bits of the react starter kit took me a bit of time.  I way underestimated the effort
+involved on this step :)
 
-Subsequently the Article page took me about 3.5 hours to make all the components and tweak it to run
-correctly.
+4 hours: Article page.
+2.5 hours: Masonry page.
+1.75 hours: Tile page.
+45 minutes: Tiles page.
+45 minutes: misc touchups.
 
-The masonry page has taken 2.5 hours to complete.
+At this point I'm considering some architectural decisions I made and how I might rework things to
+let things be a little more data driven and less static.  I could play with component
+identification and rendering, but the details of the layouts might be poor with this approach.
+So, currently, it is what it is.
