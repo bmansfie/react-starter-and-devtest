@@ -13,19 +13,27 @@
 
 @import '../variables.css';
 
-.title {
-  font-size: 43px;
-  font-weight: lighter;
-}
-
-.subTitle {
-  font-size: 18px;
-  font-weight: lighter;
-}
-
 /*
  * Base styles
  * ========================================================================== */
+
+h3 {
+  font-size: 32px;
+  font-weight: lighter;
+  margin-top: 48px;
+  margin-bottom: 7px;
+  width: 80%;
+}
+
+p {
+  width: 80%;
+}
+
+.container {
+  flex-grow: 9;
+  display: inline-flex;
+  margin: 90px 0 0 0;
+}
 
 html {
   color: #222;
@@ -83,6 +91,41 @@ img,
 svg,
 video {
   vertical-align: middle;
+}
+
+.imageTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+.imageCaption {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.caption {
+  display: flex;
+  flex-direction: row;
+}
+.titleAndCaption {
+  flex-grow: 1;
+  margin: 8px 0 0 0;
+}
+
+.thumbnails {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* float: right; */
+}
+
+.thumb {
+  height: 75px;
+  width: 75px;
+  margin: 10px 0 10px 10px;
+}
+
+.bigImage {
+  height: 533px;
+  width: 800px;
 }
 
 /*

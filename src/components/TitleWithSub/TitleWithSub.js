@@ -14,11 +14,11 @@ import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
 
-function TitleWithSub({ children }) {
+function TitleWithSub({ subtitle, title }) {
   return (
     <div>
-      <Header />
-      {React.Children.only(children)}
+      <div className={s.subTitle}>{subtitle}</div>
+      <div className={s.title}>{title}</div>
     </div>
   );
 }
@@ -27,7 +27,8 @@ function TitleWithSub({ children }) {
 //<Footer />
 
 TitleWithSub.propTypes = {
-  children: PropTypes.element.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default withStyles(s)(TitleWithSub);

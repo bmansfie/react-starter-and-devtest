@@ -13,19 +13,24 @@
 
 @import '../variables.css';
 
-.title {
-  font-size: 43px;
-  font-weight: lighter;
-}
-
-.subTitle {
-  font-size: 18px;
-  font-weight: lighter;
-}
-
 /*
  * Base styles
  * ========================================================================== */
+
+.video {
+  flex-grow: 1;
+  float: right;
+  margin: 0 0 18px 18px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 7px 0 0 0;
+}
+
+.caption {
+
+}
 
 html {
   color: #222;
@@ -83,6 +88,41 @@ img,
 svg,
 video {
   vertical-align: middle;
+}
+
+.imageTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+.imageCaption {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.caption {
+  display: flex;
+  flex-direction: row;
+}
+.titleAndCaption {
+  flex-grow: 1;
+  margin: 8px 0 0 0;
+}
+
+.thumbnails {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* float: right; */
+}
+
+.thumb {
+  height: 75px;
+  width: 75px;
+  margin: 10px 0 10px 10px;
+}
+
+.bigImage {
+  height: 533px;
+  width: 800px;
 }
 
 /*
