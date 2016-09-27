@@ -1,17 +1,12 @@
 /**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
+ * @author Brandon Mansfield
  */
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './MasonryTile.css';
 
-function MasonryTile({ image, title, content, tail }) {
+function MasonryTile({ image, heading, content, meta }) {
   if (image)
     var myImage = <img className={s.image} src={image} />
   else
@@ -21,22 +16,22 @@ function MasonryTile({ image, title, content, tail }) {
     <div className={s.container}>
       {myImage}
       <div className={s.title}>
-        {title}
+        {heading}
       </div>
         <div className={s.content}>
           {content}
         </div>
       <div className={s.tail}>
-        {tail}
+        {meta}
       </div>
     </div>
   );
 }
 
 MasonryTile.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  tail: PropTypes.string.isRequired,
+  meta: PropTypes.string.isRequired,
 };
 
 export default withStyles(s)(MasonryTile);

@@ -8,4 +8,4 @@ all running smoothly.  I way underestimated the effort involved on this step :)
 Subsequently the Article page took me about 3.5 hours to make all the components and tweak it to run
 correctly.
 
-The masonry page has logged 1 hours to date.
+The masonry page has taken 2.5 hours to complete.

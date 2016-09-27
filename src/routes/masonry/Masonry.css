@@ -16,14 +16,28 @@
   background-color: var(--brand-color);
 }
 
+.masonryColumns {
+  display: flex;
+  flex-direction: row;
+}
+
 .masonryBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 18px auto;
+  /* width: 850px; */
+  background-color: var(--brand-color);
+  /* height: 1040px; */
+}
+
+.filler {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 18px auto;
   width: 800px;
   background-color: var(--brand-color);
-  height: 1500px;
 }
 
 .lead {

@@ -1,13 +1,9 @@
 /**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
+ * @author Brandon Mansfield
  */
 
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
+import ReactDOM from 'react-dom/server';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 //import ArticleLayout from '../../components/ArticleLayout';
 //import TitleWithSub from '../../components/TitleWithSub';
@@ -15,10 +11,12 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 //import ArticleContent from '../../components/ArticleContent';
 //import ArticleVideo from '../../components/ArticleVideo';
 import MasonryTile from '../../components/MasonryTile';
+import LoadMoreButton from '../../components/LoadMoreButton';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import s from './Masonry.css';
 import loremIpsum from 'lorem-ipsum';
+var masonryData = require('./masonry-data.json');
 
 // this is our data input point for this template, just for ease.
 // plugging in a backend isn't part of the assignment.
@@ -61,34 +59,76 @@ function genP() {
 function genTile() {
   return <MasonryTile
     image={randomImage()}
-    title={loremIpsum()}
+    heading={loremIpsum()}
     content={genP()}
-    tail="Donec Ullamcorper." />;
+    meta="Donec Ullamcorper." />;
 }
 
-var masonryData = {
-};
-
-function Masonry(input) {
-  return (
-    <div className={s.container}>
-      <Header />
-      <div className={s.container}>
-        <div className={s.masonryBox}>
-          {genTile()}
-          {genTile()}
-          {genTile()}
-          {genTile()}
-          {genTile()}
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-Masonry.propTypes = {
+class Masonry extends Component {
+  static propTypes = {
   //title: PropTypes.string.isRequired,
-};
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      render: 'short'
+    };
+  };
+
+  clicked() {
+    this.setState({render: 'all'});
+  }
+
+  render() {
+    var tilesCol1 = [];
+    var tilesCol2 = [];
+    if (this.state.render === 'short') {
+      var end = 5;
+      var button =
+        <div className={s.filler} id={s.filler}>
+          <LoadMoreButton label="Load More" parent={this}
+                          onClick={this.clickMore}
+          />
+        </div>;
+    } else {
+      end = masonryData.tiles.length;
+      button = '';
+    }
+    for (var i = 0; i < end; i++) {
+      if (i%2 == 0) {
+        var activeCol = tilesCol1;
+      } else {
+        activeCol = tilesCol2;
+      }
+      activeCol.push(<MasonryTile
+        key={i}
+        heading={masonryData.tiles[i].heading}
+        content={masonryData.tiles[i].content}
+        image={masonryData.tiles[i].image}
+        meta={masonryData.tiles[i].meta}
+      />);
+    }
+    console.log('render: ' + this.state.render);
+    console.log('end: ' + end);
+    return (
+      <div className={s.container}>
+        <Header />
+        <div className={s.container}>
+          <div className={s.masonryColumns}>
+            <div className={s.masonryBox}>
+              {tilesCol1}
+            </div>
+            <div className={s.masonryBox}>
+              {tilesCol2}
+            </div>
+          </div>
+        </div>
+        {button}
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default withStyles(s)(Masonry);
