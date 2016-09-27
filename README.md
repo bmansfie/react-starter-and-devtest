@@ -2,6 +2,11 @@
 
 *requires node >5*
 
+'''
+npm install
+npm start
+'''
+
 See the timelog.txt for time spent on the various pages and setting up the starter kit.
 
 I did put some thought into the frame work I picked.  I wanted something up to date with the state
