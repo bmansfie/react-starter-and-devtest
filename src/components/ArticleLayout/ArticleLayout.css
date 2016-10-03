@@ -18,7 +18,7 @@
  * ========================================================================== */
 
 html {
-  color: #222;
+  color: var(--light-font);
   font-weight: 100;
   font-size: 1em; /* ~16px; */
   font-family: var(--font-family-base);

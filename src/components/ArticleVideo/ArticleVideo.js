@@ -10,7 +10,7 @@ function ArticleVideo({ youtubeId, title, caption }) {
 
   return (
     <div className={s.video}>
-      <iframe title="Youtube player" width="360" height="200" src={'https://www.youtube.com/embed/' + youtubeId} frameborder="0" allowfullscreen>
+      <iframe title="Youtube player" width="360" height="200" src={'https://www.youtube.com/embed/' + youtubeId} frameborder="0" allowFullScreen>
       </iframe>
       <div className={s.title}>
         {title}

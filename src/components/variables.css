@@ -31,5 +31,9 @@
   --screen-sm-min: 768px;  /* Small screen / tablet */
   --screen-md-min: 992px;  /* Medium screen / desktop */
   --screen-lg-min: 1200px; /* Large screen / wide desktop */
-  --brand-color: #4682b4;
+  /* --brand-color: #4682b4; */
+  --brand-color: #005f83;
+  --light-font: #333333;
+  --light-grey: #d0d3d4;
+  --normal-weight: 100;
 }

@@ -20,13 +20,13 @@
 }
 
 .red {
-  border-top: 7px solid darkred;
+  border-top: 7px solid #e94661;
 }
 .blue {
-  border-top: 7px solid darkblue;
+  border-top: 7px solid #005f83;
 }
 .green {
-  border-top: 7px solid darkgreen;
+  border-top: 7px solid #6ba539;
 }
 
 .titleSeparatorHR {
@@ -40,7 +40,7 @@
  * ========================================================================== */
 
 html {
-  color: #222;
+  color: var(--light-font);
   font-weight: 100;
   font-size: 1em; /* ~16px; */
   font-family: var(--font-family-base);
